@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Montserrat } from 'next/font/google'
 import './globals.css';
 
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable}`}>
       <body>{children}</body>
+      <SpeedInsights />
     </html>
   );
 }
