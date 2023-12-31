@@ -19,7 +19,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@blog/articles": ["./modules/articles/index.ts"],
+      "@blog/articles/server": ["./modules/articles/server.ts"],
+      "@blog/data": ["./modules/data/index.ts"],
+      "@blog/data/server": ["./modules/data/server.ts"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
