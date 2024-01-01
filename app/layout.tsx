@@ -1,12 +1,13 @@
-import { Analytics } from '@vercel/analytics/react';
-import { Montserrat } from 'next/font/google'
-import './globals.css';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+import { Montserrat } from "next/font/google";
+import "./globals.css";
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-montserrat'
-})
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
 
 export default function RootLayout({
   children,
@@ -15,8 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${montserrat.variable}`}>
-      <body>{children}</body>
-      <Analytics />
+      <body>
+        {children}
+        <SpeedInsights />
+        <Analytics />
+      </body>
     </html>
   );
 }
